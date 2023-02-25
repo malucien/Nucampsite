@@ -12,14 +12,10 @@ $(function() {
     }
   });
   
-});
-
-$(function() {
   $("#reserveBtn").on( "click", function() {
     $("#reserveModal").modal("show");
   });
-});
-$(function() {
+
   $("#loginBtn").on( "click", function() {
     $("#loginModal").modal("show");
   });
