@@ -15,12 +15,12 @@ $(function() {
 });
 
 $(function() {
-  $("#reserveBtn").click(function() {
+  $("#reserveBtn").on( "click", function() {
     $("#reserveModal").modal("show");
   });
 });
 $(function() {
-  $("#loginBtn").click(function() {
+  $("#loginBtn").on( "click", function() {
     $("#loginModal").modal("show");
   });
 });
