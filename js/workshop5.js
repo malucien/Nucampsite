@@ -29,8 +29,20 @@ class Bootcamp {
       }
     }
     this.students.push(studentToRegister);
-    console.log(`Registering ${studentToRegister.name} in ${this.name}`);
+    console.log(`Registering ${studentToRegister.name} in ${this.name} bootcamp.`);
     return true;
+  }
+  listStudents() {
+    if (this.students.length <= 0) {
+      console.log(`No students are registered to the ${this.name} bootcamp.`);
+      return false;
+    } else {
+      console.log(`The students registered in ${this.name} are:`);
+      for (let student of this.students ) {
+        console.log(`Name: ${student.name} - Email ${student.email}`);
+      }
+      return true;
+    }
   }
 
 }
@@ -48,7 +60,18 @@ const runTest = (bootcamp, student) => {
   if ( attemptOne && !attemptTwo && !attemptThree) {
       console.log("TASK 3: PASS");
   }
+
+  bootcamp.registerStudent(new Student('Babs Bunny', 'babs@bunny.com'));
+  if (bootcamp.listStudents()) {
+      console.log("TASK 4: PASS 1/2");
+  }
+  bootcamp.students = [];
+  if (!bootcamp.listStudents()) {
+      console.log("TASK 4: PASS 2/2");
+  }
 };
+
+
 
 runTest(reactBootcamp, testStudent);
 
