@@ -1,3 +1,5 @@
+/*Week 5 Assignment*/
+
 class Student {
   constructor(name, email) {
     this.name = name;
@@ -70,8 +72,6 @@ const runTest = (bootcamp, student) => {
       console.log("TASK 4: PASS 2/2");
   }
 };
-
-
 
 runTest(reactBootcamp, testStudent);
 
